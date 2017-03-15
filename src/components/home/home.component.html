@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-12 slideshow">
+    <div>
+        <img src="img/slideshow/sub.jpg" alt="Banner 1" />Coool
+    </div>
+  </div>
+</div>
+<div class="col-md-9">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of products | async">
+      <div class="product">
+        <div class="product_sale" *ngIf="product.on_sale.data.key == 1">Sale</div>
+        <a href="/product/{{ product.slug }}" class="img-cont"><img alt="{{ product.title }}"></a>
+        <div class="name {{ product.title }} {{ product.name }} ">
+          <a href="/product/{{ product.slug }}">{{ product.name}}</a>
+      </div>
+        <div class="price">
+          <p><span class="strike">{{ product.pricing.formatted.with_tax }}</span> <strong>&pound;{{ product.sale_price }}.00</strong></p>
+        </div>
+        <div class="price">
+          <p><strong>{{ product.pricing.formatted.with_tax }}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="newsletter clearfix">
+        <h3>Newsletter</h3>
+        <div>
+          <input type="text" name="email" class="email">
+          <input type="submit" value="Subscribe" class="btn btn-primary">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
