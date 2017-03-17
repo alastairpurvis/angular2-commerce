@@ -10,7 +10,6 @@ import { Router } from './app.routes';
 import { Config }  from '../services/config';
 import { Globals }  from '../services/globals';
 import { Actions }  from '../services/actions';
-import Schema  from 'schema-client';
 import { KeysPipe }  from '../services/pipes';
 
 // Declarations
