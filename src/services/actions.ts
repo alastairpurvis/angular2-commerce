@@ -24,8 +24,6 @@ export class Actions {
 
 	public formatProduct(product) {
 		product.category = this.first(product.category.data);
-
-
 		product.image    = Object.keys(product.images).length > 0 ? this.first(product.images) : {url: {http: '/img/no-img.jpg', https: '/img/no-img.jpg'}};
 
 		return product;
