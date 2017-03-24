@@ -19,10 +19,10 @@
             <a data-toggle="dropdown" class="dropdown-toggle" href="/category/{{ category.slug }}" ng-if="category.children">{{ category.title }} <b class="caret"></b></a>
             <a href="/category/{{ category.slug }}" ng-if="!category.children">{{ category.title }}</a>
             <ul class="dropdown-menu" ng-if="category.children">
-              <li ng-repeat-start="child in category.children" ng-if="child.children" class="dropdown-header"><a href="/category/{{ child.slug }}">{{ child.title }}</a></li>
+              <li ng-if="child.children" class="dropdown-header"><a href="/category/{{ child.slug }}">{{ child.title }}</a></li>
               <li ng-if="child.children" *ngFor="sub in child.children"><a href="/category/{{ sub.slug }}">{{ sub.title }}</a></li>
               <li ng-if="child.children" class="divier"></li>
-              <li ng-if="!child.children" ng-repeat-end><a href="/category/{{ child.slug }}">{{ child.title }}</a></li>
+              <li ng-if="!child.children" ><a href="/category/{{ child.slug }}">{{ child.title }}</a></li>
             </ul>
           </li>
         </ul>
