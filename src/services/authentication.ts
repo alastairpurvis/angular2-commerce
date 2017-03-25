@@ -14,7 +14,6 @@ export class Store {
     constructor(private globals: Globals) {}
 
     authenticate() {
-        alert("fuck fuck f");console.log("fuckl");
             let moltin = new Moltin({
             publicId: Config.publicId,
             notice(type, msg, code) {
