@@ -22,7 +22,6 @@ export class HomeComponent {
 	this.display = function(product) {
 
 		let k, v;
-		console.log(product);
 
 		// globals.page options
 		globals.page.titleSet(product.title);
