@@ -23,7 +23,6 @@ export class HomeComponent {
             return productarr.data;
         });
 
-
         setTimeout(() => {
   console.log(this.products);
 }, 2000);
