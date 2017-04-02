@@ -22,9 +22,5 @@ export class HomeComponent {
         this.products = globals.shop.Product.Search({featured: 1, status: 1, limit: 9}).then(function(productarr) {
             return productarr.data;
         });
-
-        setTimeout(() => {
-  console.log(this.products);
-}, 2000);
     }
 }
